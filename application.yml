@@ -8,9 +8,9 @@ spring:
 ---
 #这里是zuul网关的配置
 spring:
-  profiles: match-zuul
+  profiles: matchZuul
   application:
-    name: match-zuul
+    name: matchZuul
 server:
   port: 7003
 #忽略所有请求，不包括zuul.routes指定的路径

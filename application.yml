@@ -6,9 +6,9 @@
 zuul:
   routes:
     api-a:
-      path: /match-lj/**
+      path: /match-22/**
       #这里用serviceId代替url，用服务名代替ip+端口号
-      serviceId: match-lj
+      serviceId: match-22
     api-b:
       path: /match-hhs/**
       #这里用serviceId代替url，用服务名代替ip+端口号

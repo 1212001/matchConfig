@@ -1,40 +1,15 @@
-spring:
-  profiles:
-    active: dev
----
-spring:
-  profiles: dev
-  application: dev
----
-#这里是zuul网关的配置
-spring:
-  profiles: matchZuul
-  application:
-    name: matchZuul
-server:
-  port: 7003
+﻿#这里是zuul网关的配置
 #忽略所有请求，不包括zuul.routes指定的路径
 #zuul.ignored-services=*
 # routes to serviceId 这里边是通过serviceid来绑定地址，当在路径后添加/api-a/   则是访问service-A对应的服务。
 # ** 表示多层级，*表示单层级
-zuul:
-  routes:
-    api-a:
-      path: /match-lj/**
-      #这里用serviceId代替url，用服务名代替ip+端口号
-      serviceId: match-lj
-    api-b:
-      path: /match-hhs/**
-      #这里用serviceId代替url，用服务名代替ip+端口号
-      serviceId: match-hhs
-eureka:
-  client:
-    service-url:
-      #defaultZone: http://182.92.168.185:7001/eureka/ # 指定服务注册中心
-      defaultZone: http://192.168.43.117:7001/eureka/ # 指定服务注册中心
-    #是否将自己注册到eureka服务中，默认为true
-    register-with-eureka: true
-      #是否从eureka服务中抓取已经注册得服务，默认为true
-    fetch-registry: true
-  instance:
-    prefer-ip-address: true
+#zuul:
+#  routes:
+#    api-a:
+#      path: /match-jj/**
+#      #这里用serviceId代替url，用服务名代替ip+端口号
+#      serviceId: match-jj
+#    api-b:
+#      path: /match-hhs/**
+#      #这里用serviceId代替url，用服务名代替ip+端口号
+#      serviceId: match-hhs

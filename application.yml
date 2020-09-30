@@ -3,6 +3,9 @@
 #zuul.ignored-services=*
 # routes to serviceId 这里边是通过serviceid来绑定地址，当在路径后添加/api-a/   则是访问service-A对应的服务。
 # ** 表示多层级，*表示单层级
+spring: 
+  profiles: matchZull
+  application: matchZull
 zuul:
   routes:
     api-a:

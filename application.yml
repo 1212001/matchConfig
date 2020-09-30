@@ -1,3 +1,4 @@
+---
 #这里是zuul网关的配置
 #忽略所有请求，不包括zuul.routes指定的路径
 #zuul.ignored-services=*
@@ -17,3 +18,4 @@ zuul:
       #这里用serviceId代替url，用服务名代替ip+端口号
       serviceId: match-hhs
 
+---
